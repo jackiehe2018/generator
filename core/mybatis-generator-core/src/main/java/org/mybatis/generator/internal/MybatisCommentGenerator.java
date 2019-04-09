@@ -40,6 +40,7 @@ import org.mybatis.generator.internal.util.StringUtility;
 
 /**
  *  MybatisCommentGenerator for <commentGenerator  type="org.mybatis.generator.internal.MybatisCommentGenerator"></commentGenerator>
+ *  if you use this code ,please add <property name="addRemarkComments" value="true"/>
  *  this Generator is only on generator-jackie
  * @author Jackie
  * @date 2019-04-09 16:12
