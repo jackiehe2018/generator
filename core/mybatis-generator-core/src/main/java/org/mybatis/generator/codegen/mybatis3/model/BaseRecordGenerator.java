@@ -98,7 +98,10 @@ public class BaseRecordGenerator extends AbstractJavaGenerator {
                 topLevelClass.addField(field);
                 topLevelClass.addImportedType(field.getType());
             }
-
+            /**
+            * if you want to generator without getter and setter ,you can delete these code .
+            */
+            // ----- delete start ------------------
             Method method = getJavaBeansGetter(introspectedColumn, context, introspectedTable);
             if (plugins.modelGetterMethodGenerated(method, topLevelClass,
                     introspectedColumn, introspectedTable,
@@ -114,6 +117,7 @@ public class BaseRecordGenerator extends AbstractJavaGenerator {
                     topLevelClass.addMethod(method);
                 }
             }
+            // ------ delete end ------------------
         }
 
         List<CompilationUnit> answer = new ArrayList<>();
